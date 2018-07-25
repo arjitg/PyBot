@@ -9,10 +9,8 @@ subreddit = bot.subreddit('space')
 comments = subreddit.stream.comments()
 
 for comment in comments:
-    text = comment.body # Fetch body
-    author = comment.author # Fetch author
+    text = comment.body
+    author = comment.author
     if 'mars' in text.lower():
-        # Generate a message
-        message = "Why no love for Titan, u/{0} ?".format(author)
-
-        comment.reply(message) # Send message
+        message = "Are you a musk fan u/{0} ?".format(author)
+        comment.reply(message)
